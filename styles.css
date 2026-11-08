@@ -408,7 +408,7 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
   display: block; overflow: hidden; border-radius: 12px; border: 1px solid var(--line);
   background: var(--bg-alt); aspect-ratio: 4 / 3;
 }
-a.thumb, a.card__img, a.case__media, .study__gallery a { cursor: zoom-in; }
+a.thumb, a.card__img, a.case__media, .study__gallery a, .card__mosaic a { cursor: zoom-in; }
 .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
 .thumb--doc img { object-position: top; }
 .lift:hover .thumb img, a.thumb:hover img { transform: scale(1.05); }
@@ -2524,3 +2524,11 @@ main > .section { content-visibility: auto; contain-intrinsic-size: auto 1400px;
 /* Sized from the image's own width and height attributes, so its space is held before it loads and it is never stretched */
 .proj__media--fit { width: fit-content; max-width: 100%; margin-inline: auto; }
 .proj__media--fit img { display: block; max-width: 100%; height: auto; }
+/* Smaller builds: four screenshots share the card's picture area, and a ▶ beside each recorded build plays its demo */
+.card__mosaic { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 2px; background: var(--line); }
+.card__mosaic a { display: block; overflow: hidden; background: var(--bg-alt); }
+.card:hover .card__mosaic img { transform: none; }
+.card__mosaic a:hover img { transform: scale(1.06); }
+.mini .mini__play { margin-left: 6px; font-weight: 500; color: var(--accent); }
+/* Up to 1100px wide this card is the tallest in its row, so the four screenshots sit in one strip and the list rows are a little tighter: the row stays the height it was */
+@media (max-width: 1100px) { .card__mosaic { grid-template-columns: repeat(4, 1fr); grid-template-rows: 1fr; aspect-ratio: 4 / 1; } #small .mini li { padding: 6px 0; } }
