@@ -22,7 +22,7 @@ It rebuilds the `.min` files, versions them so visitors never get a new page wit
 
 If the top of the page changes, regenerate its inline CSS first with `node tools/make-critical.js http://localhost:4321/`.
 
-Phones paint from that inline CSS while the full stylesheet loads alongside. `sw.js` keeps files on the device so repeat visits are fast; pages always come fresh from the network.
+Phones paint from that inline CSS while the full stylesheet loads alongside. The Anton font is embedded in it by `build.js`, so the poster type is there at the first paint. Don't add font preloads: Chrome holds the whole first paint until a preloaded font arrives. `sw.js` keeps files on the device so repeat visits are fast; pages always come fresh from the network.
 
 ## Project pages
 

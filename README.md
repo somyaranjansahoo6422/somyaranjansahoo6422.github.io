@@ -45,15 +45,15 @@ Each project has its own page with the full case study, screenshots and links.
 
 ## Website analytics
 
-Measured with Google PageSpeed Insights on 7 November 2026. Google tests mobile on a simulated budget phone over slow 4G.
+Measured with Google PageSpeed Insights on 8 November 2026. Google tests mobile on a simulated budget phone over slow 4G.
 
 | | Performance | Accessibility | Best Practices | SEO |
 |---|---|---|---|---|
-| **Mobile** | 96–100 | 100 | 100 | 100 |
-| **Desktop** | 100 | 100 | 100 | 100 |
+| **Mobile** | 98 | 100 | 100 | 100 |
+| **Desktop** | 99 | 100 | 100 | 100 |
 
-- **Speed on a phone:** the first screen appears in about 1 second and the main image in about 2.4 seconds on Google's slow-4G test. Repeat visits load from the device and appear about twice as fast.
-- **Weight:** about 190 KB for the first screen, with fonts trimmed to the characters the site uses.
+- **Speed on a phone:** the first screen appears in about 1.1 seconds and the main image in about 1.5 seconds on Google's slow-4G test, with nothing shifting as it loads. Repeat visits load from the device and appear about twice as fast.
+- **Weight:** about 200 KB for the first screen, with fonts trimmed to the characters the site uses.
 - **Search:** indexed on Google and Bing, with structured data marking it as my profile page.
 - **Privacy:** no tracking cookies, no ad scripts and no analytics trackers.
 - **Built with:** plain HTML, CSS and JavaScript, hosted on GitHub Pages.
