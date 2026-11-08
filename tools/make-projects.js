@@ -193,7 +193,11 @@ function page(p, d, all, shell) {
   const lead = d.kind === 'case' ? d.purpose : d.kind === 'card' ? (CARD_PAGES[p.id].lede || d.purpose) : d.lede.replace(/<[^>]+>/g, '');
   const firstNote = d.kind === 'card' ? (((CARD_PAGES[p.id].sections || [])[0] || {}).p || '') : '';
   const more = (d.kind === 'case' ? (d.desc[0] || '') : firstNote).replace(/<[^>]+>/g, '');
-  const description = cut(`${lead} ${more}`.trim(), 158);
+  // Short descriptions get a line about who made it, so every page has a full search snippet.
+  const base = `${lead} ${more}`.trim();
+  const description = cut(base.length < 120 ? `${base} A project by Somya Ranjan Sahoo.` : base, 158);
+  const tags = d.kind === 'data' ? ['Python', 'pandas', 'SQL', 'Excel', 'data analysis'] : d.chips && d.chips.length ? d.chips : ['Python', 'Tkinter', 'CustomTkinter', 'Pygame', 'Python games', 'command-line apps'];
+  const keywords = [name, ...tags, 'Somya Ranjan Sahoo', 'portfolio'].join(', ');
   const image = isData ? d.dash.img : d.image;
   const ogImage = SITE + abs(image.big || image.src);
   const repo = (d.links || []).map((l) => l.href).find((h) => /github\.com/.test(h));
@@ -337,6 +341,7 @@ function page(p, d, all, shell) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(p.title)} | Somya Ranjan Sahoo</title>
   <meta name="description" content="${esc(description)}">
+  <meta name="keywords" content="${esc(keywords)}">
   <meta name="author" content="Somya Ranjan Sahoo">
   <meta name="theme-color" content="#0b0d12">
   <link rel="canonical" href="${url}">
