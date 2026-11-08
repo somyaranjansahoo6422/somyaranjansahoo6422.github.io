@@ -1,7 +1,7 @@
 /* Fonts live on this site, trimmed to the characters and weights it uses (SIL Open Font License, see assets/fonts/LICENSE.txt) */
 @font-face { font-family: "Anton"; src: url("assets/fonts/anton.woff2") format("woff2"); font-weight: 400; font-display: swap; }
-/* If Anton is late or missing, a plain font sized to Anton's width keeps PORTFOLIO on the screen */
-@font-face { font-family: "Poster Fallback"; src: local("Roboto"), local("Roboto-Regular"), local("Arial"), local("Helvetica"); size-adjust: 66%; }
+/* If Anton is late or missing, a plain font sized to Anton's width and height keeps PORTFOLIO on the screen, and nothing moves when Anton arrives */
+@font-face { font-family: "Poster Fallback"; src: local("Roboto"), local("Roboto-Regular"), local("Arial"), local("Helvetica"); size-adjust: 66%; ascent-override: 179%; descent-override: 50%; line-gap-override: 0%; }
 @font-face { font-family: "Caveat"; src: url("assets/fonts/caveat.woff2") format("woff2"); font-weight: 600; font-display: swap; }
 @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/space-grotesk.woff2") format("woff2"); font-weight: 500 700; font-display: swap; }
 @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/space-grotesk-ext.woff2") format("woff2"); font-weight: 500 700; font-display: swap; unicode-range: U+20B9; }

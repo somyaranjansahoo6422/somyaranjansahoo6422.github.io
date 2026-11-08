@@ -34,7 +34,11 @@ fs.writeFileSync('styles.min.css', styleOut);
 const v = { css: version(styleOut), js: version(scriptOut) };
 
 // Fonts stay outside the phone-only block because @font-face cannot sit inside @media.
-const critical = css(read('critical.css'));
+// Anton (7 KB) travels inside the page itself: the first paint then has the poster font with no wait, and
+// nothing moves when it arrives. A font fetched before the first paint would hold the whole screen back.
+const anton = fs.readFileSync('assets/fonts/anton.woff2').toString('base64');
+const critical = css(read('critical.css')).replace('url(assets/fonts/anton.woff2)', `url(data:font/woff2;base64,${anton})`);
+if (!critical.includes('base64,')) throw new Error('Anton was not inlined: check the @font-face rule in critical.css');
 
 // Every page that loads the shared files: the homepage, the privacy and 404 pages, and each project page.
 const pages = ['index.html', 'privacy.html', '404.html'].concat(
@@ -51,6 +55,7 @@ for (const page of pages) {
   if (page === 'index.html') {
     html = html.replace(/(<style id="critical">)[\s\S]*?(<\/style>)/, (m, a, b) => a + critical + b);
     html = html.replace(/style-src 'self'( 'sha256-[^']+')?/, `style-src 'self' 'sha256-${sha(critical)}'`);
+    html = html.replace(/font-src 'self'( data:)?/, "font-src 'self' data:");
     // Wider screens preload the hand script from the head; it must be the exact versioned file script.js loads, or it downloads twice.
     html = html.replace(/\['hand3d(?:\.min)?\.js(?:\?v=[0-9a-f]+)?','script'\]/, `['${lazy.hand3d}','script']`);
   }
