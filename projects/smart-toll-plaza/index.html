@@ -55,6 +55,7 @@
       <p class="proj__actions"><a class="btn btn--primary btn--sm" href="https://github.com/somyaranjansahoo6422/smart-toll-plaza-system" target="_blank" rel="noopener noreferrer">Source code ↗</a> <a class="btn btn--ghost btn--sm" href="/projects/india-toll-network-analysis/">See the data analysis</a></p>
       <figure class="proj__media proj__media--fit"><img src="/assets/img/proj-toll-map-960.webp" srcset="/assets/img/proj-toll-map-480.webp 480w, /assets/img/proj-toll-map-720.webp 720w, /assets/img/proj-toll-map-960.webp 960w, /assets/img/proj-toll-map-1520.webp 1520w" sizes="(max-width: 1552px) calc(100vw - 32px), 1520px" alt="Map of India with about two thousand toll plazas plotted as blue and orange dots, labelled 2,003 toll plazas mapped" width="1520" height="1573" fetchpriority="high"></figure>
       <div class="proj__grid">
+        <section class="proj__block"><h2>Where it started</h2><p>My Class 12 toll plaza project at Sainik School Bhubaneswar, built with my friend Suman Kumar Behera (it is on my <a href="/projects/smaller-builds/">smaller builds</a> page). This is my upgraded version of that idea, which I now develop on my own.</p></section>
         <section class="proj__block"><h2>Architecture</h2><p>A Streamlit multipage app behind a sign-in, with four pages: Operations Overview, Live Camera, GIS Command Center and Analytics. A <code>CloudSQLAdapter</code> class stores transactions, security audits and shift closures in a JSON file, behind an interface meant to be swapped for a cloud SQL database later.</p></section>
         <section class="proj__block"><h2>Data flow</h2><p>WebRTC camera frame → every third frame → FastALPR (YOLOv9 plate detector + MobileViT OCR) → confidence ≥ 0.50 → Indian plate-format check → blacklist screening or diplomatic exemption → simulated FASTag or cash charge → ledger and audit entry.</p></section>
         <section class="proj__block"><h2>Map &amp; analytics</h2><p>A national toll-plaza registry (2,000+ rows) cleaned with pandas and plotted with Plotly's map view; analytics show payment mix and revenue by vehicle type; prices rise 1.15× in peak hours.</p></section>
@@ -109,6 +110,6 @@
       </nav>
     </div>
   </footer>
-  <script src="../../script.min.js?v=9fcd5ee5" defer></script>
+  <script src="../../script.min.js?v=86e2abc0" defer></script>
 </body>
 </html>

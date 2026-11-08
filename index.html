@@ -43,7 +43,7 @@
 </style>
   <link id="css" rel="stylesheet" href="styles.min.css?v=f070589e" media="(min-width: 761px)">
   <noscript><link rel="stylesheet" href="styles.min.css?v=f070589e"></noscript>
-  <script src="script.min.js?v=9fcd5ee5" defer fetchpriority="low"></script>
+  <script src="script.min.js?v=86e2abc0" defer fetchpriority="low"></script>
 
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}try{if(matchMedia('(prefers-reduced-motion: reduce)').matches){}else if(matchMedia('(max-width: 760px)').matches||(matchMedia('(pointer: coarse)').matches&&Math.min(screen.width,screen.height)<=600)){document.documentElement.classList.add('intro-lite')}else{document.documentElement.classList.add('build-on');[['hand3d.min.js?v=538266f5','script'],['assets/img/hand-r.webp','image'],['assets/img/hand-l.webp','image']].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.href=f[0];l.as=f[1];document.head.appendChild(l)});setTimeout(function(){if(!window.__bp)document.documentElement.classList.remove('build-on')},16000)}}catch(e){}try{var c=document.getElementById('css'),r=function(){c.media='all';document.documentElement.classList.add('css-ready')};if(c.sheet)r();else{if(location.hash)c.media='all';c.addEventListener('load',r)}}catch(e){document.documentElement.classList.add('css-ready')}</script>
 
@@ -366,6 +366,7 @@ LIMIT 10;</textarea>
               <details class="study">
                 <summary>Read the case study</summary>
                 <dl class="study__grid">
+                  <div><dt>Where it started</dt><dd>My Class 12 toll plaza project at Sainik School Bhubaneswar, built with my friend Suman Kumar Behera (it is on my <a href="/projects/smaller-builds/">smaller builds</a> page). This is my upgraded version of that idea, which I now develop on my own.</dd></div>
                   <div><dt>Architecture</dt><dd>A Streamlit multipage app behind a sign-in, with four pages: Operations Overview, Live Camera, GIS Command Center and Analytics. A <code>CloudSQLAdapter</code> class stores transactions, security audits and shift closures in a JSON file, behind an interface meant to be swapped for a cloud SQL database later.</dd></div>
                   <div><dt>Data flow</dt><dd>WebRTC camera frame → every third frame → FastALPR (YOLOv9 plate detector + MobileViT OCR) → confidence ≥ 0.50 → Indian plate-format check → blacklist screening or diplomatic exemption → simulated FASTag or cash charge → ledger and audit entry.</dd></div>
                   <div><dt>Map &amp; analytics</dt><dd>A national toll-plaza registry (2,000+ rows) cleaned with pandas and plotted with Plotly's map view; analytics show payment mix and revenue by vehicle type; prices rise 1.15× in peak hours.</dd></div>
