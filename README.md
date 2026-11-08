@@ -42,7 +42,7 @@ Each project has its own page with the full case study, screenshots and links.
 | [UNSPOKEN](https://somyaranjansahoo6422.github.io/projects/unspoken/) | A wearable that helps visually impaired users sense obstacles and lets non-verbal users speak |
 | [ANUMATI](https://somyaranjansahoo6422.github.io/projects/anumati/) | A regulatory-clearance engine that models business licences as a dependency graph |
 | [Student Attendance System](https://somyaranjansahoo6422.github.io/projects/student-attendance-system/) | A desktop app where students check in by scanning a QR code |
-| [VECTOR](https://somyaranjansahoo6422.github.io/projects/vector/) | An air-traffic-control simulator you play by voice |
+| [VECTOR](https://somyaranjansahoo6422.github.io/projects/vector/) | A 3D flight game built by voice, which began as an ATC simulator |
 | [Face-scan Verification & Fraud Console](https://somyaranjansahoo6422.github.io/projects/face-scan-fraud-console/) | Team builds: face-scan proof on Solana and a TigerGraph fraud console |
 | [MindEase](https://somyaranjansahoo6422.github.io/projects/mindease/) | A stress self-check, shortlisted at Smart India Hackathon 2025 |
 | [Smaller builds](https://somyaranjansahoo6422.github.io/projects/smaller-builds/) | Python games and utilities, with demo videos |

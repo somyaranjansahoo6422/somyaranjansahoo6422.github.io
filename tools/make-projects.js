@@ -25,12 +25,12 @@ const PAGES = [
 // against the project's own README, code or the homepage; keep it that way when editing.
 const CARD_PAGES = {
   vector: {
-    kicker: 'Simulator · Solo project · Voice-built',
+    kicker: '3D flight game · Solo project · Voice-built',
     sections: [
-      { h: 'How you play', p: 'Separation missions, gates and pilot read-backs, all driven by your voice.' },
-      { h: 'Built with', p: 'Python and FastAPI on the server, a Three.js 3D airspace in the browser, and the Web Speech API to hear your commands.' },
+      { h: 'Where it started', p: 'An air-traffic-control simulator played with spoken ATC commands: separation missions, gates and pilot read-backs, heard through the Web Speech API. The picture above is from that version.' },
+      { h: 'What it is now', p: 'A 3D air-combat prototype: pick an F-35 or a Su-57 and one of three fictional theatres, then intercept hostile aircraft, protect a friendly asset and destroy hostile sites, with score, health and ammo on the HUD.' },
+      { h: 'Built with', p: 'Python and FastAPI on the server, with a game loop that moves every aircraft every 80 ms, and a Three.js scene with terrain, shadows and a HUD in the browser.' },
       { h: 'How I built it', p: 'By voice dictation with Wispr Flow, speaking instead of typing, the same way I built <a href="/projects/vantage-zero/">VANTAGE: ZERO</a>.' },
-      { h: 'Where it went next', p: 'On the same FastAPI and Three.js base, VECTOR has grown into a 3D air-combat prototype: pick an F-35 or a Su-57 and one of three fictional theatres, then intercept hostile aircraft and complete objectives while the server runs the battle every 80 ms.' },
     ],
   },
   facescan: {
@@ -63,6 +63,8 @@ const CARD_PAGES = {
       { h: 'Built with', p: 'Plain HTML, CSS and JavaScript, with no frameworks and nothing to install. Nothing you answer leaves your device.' },
       { h: 'Result', p: 'Shortlisted at Smart India Hackathon 2025. It was my first hackathon.' },
     ],
+    links: [{ href: 'https://www.linkedin.com/feed/update/urn:li:activity:7507850443012820992/', label: 'SIH 2025 post' }],
+    demo2: { src: 'assets/video/mindease-memory-match.mp4', poster: 'assets/img/proj-mindease-memory-960.webp', title: 'Watch Zen Memory Match', caption: 'Turning cards to find the 8 pairs of nature emoji' },
     demo: { src: 'assets/video/mindease-stress-quiz.mp4', poster: 'assets/img/proj-mindease-quiz-960.webp', title: 'Watch the Stress Analyser', caption: 'Answering the 10 questions and getting a wellbeing score with suggestions' },
     galleryTitle: 'Screenshots and photos',
     gallery: [
@@ -84,18 +86,18 @@ const CARD_PAGES = {
         pic: { big: 'assets/img/proj-connect4-680.webp', src: 'assets/img/proj-connect4-680.webp', srcset: 'assets/img/proj-connect4-480.webp 480w, assets/img/proj-connect4-680.webp 680w', w: 680, h: 720, alt: 'Connect Four Pro mid-game against the hard AI, with red and yellow pieces on a blue board' },
       },
       'Tic Tac Toe': {
-        after: 'Connect 4 vs AI', tech: 'Tkinter',
+        after: 'Connect 4 vs AI', tech: 'Tkinter', href: 'https://github.com/somyaranjansahoo6422/tic-tac-toe',
         p: 'A dark-themed Tic Tac Toe whose AI uses the Minimax algorithm, so it never loses, plus a 2-player mode and a live scoreboard.',
         pic: { big: 'assets/img/proj-tictactoe-700.webp', src: 'assets/img/proj-tictactoe-700.webp', srcset: 'assets/img/proj-tictactoe-480.webp 480w, assets/img/proj-tictactoe-700.webp 700w', w: 700, h: 850, alt: 'Tic Tac Toe board ending in a draw against the Minimax AI' },
         video: { href: 'assets/video/tictactoe.mp4', caption: 'Tic Tac Toe: a draw against the Minimax AI, then a 2-player game' },
       },
       'Scientific Calculator': {
-        after: 'Simple Calculator', tech: 'CustomTkinter',
+        after: 'Simple Calculator', tech: 'CustomTkinter', href: 'https://github.com/somyaranjansahoo6422/scientific-calculator',
         p: 'A dark-mode scientific calculator with trigonometry and its inverses, logarithms, powers, roots, factorials, π and e, degree and radian modes, and keyboard input. It reads each expression with Python’s ast module instead of eval, so only whitelisted maths can run.',
       },
       Snake: { img: 'assets/img/proj-snake-600.webp', p: 'The snake grows every time it eats, and hitting a wall or its own body ends the run. The score resets, but the high score stays.' },
       'Simple Calculator': { img: 'assets/img/proj-calc-1600.webp', p: 'Add, subtract, multiply and divide in a loop, with clear handling of division by zero and of letters typed instead of numbers. It also ships as a Windows .exe.' },
-      'Toll Plaza Manager': { img: 'assets/img/proj-tollcli-1600.webp', p: 'A console app to add, update and remove toll plazas, with a duplicate-name check and a table of rates with a rupee total.' },
+      'Toll Plaza Manager': { img: 'assets/img/proj-tollcli-1600.webp', p: 'My Class 12 project at Sainik School Bhubaneswar, built with my classmate, bench mate and best friend Suman Kumar Behera in about a month of spare moments between classes and evening study. A console app to add, update and remove toll plazas, with toll rates by vehicle type, a duplicate-name check and a table with a rupee total.' },
     },
   },
 };
@@ -268,6 +270,9 @@ function page(p, d, all, shell) {
     if (x.demo) body += `
       <h2 class="proj__h2">${esc(x.demo.title)}</h2>
       <figure class="proj__media proj__video"><video controls preload="none" playsinline poster="${abs(x.demo.poster)}" src="${esc(abs(x.demo.src))}"></video><figcaption>${esc(x.demo.caption)}</figcaption></figure>`;
+    if (x.demo2) body += `
+      <h2 class="proj__h2">${esc(x.demo2.title)}</h2>
+      <figure class="proj__media proj__video"><video controls preload="none" playsinline poster="${abs(x.demo2.poster)}" src="${esc(abs(x.demo2.src))}"></video><figcaption>${esc(x.demo2.caption)}</figcaption></figure>`;
     if (x.gallery) body += `
       <h2 class="proj__h2">${esc(x.galleryTitle || 'Photos')}</h2>
       <div class="proj__gallery">
@@ -277,7 +282,7 @@ function page(p, d, all, shell) {
       const items = [];
       d.items.forEach((it) => {
         items.push(it);
-        Object.keys(x.builds).filter((k) => x.builds[k].after === it.name).forEach((k) => items.push({ name: k, href: '', tech: x.builds[k].tech, video: x.builds[k].video }));
+        Object.keys(x.builds).filter((k) => x.builds[k].after === it.name).forEach((k) => items.push({ name: k, href: x.builds[k].href || '', tech: x.builds[k].tech, video: x.builds[k].video }));
       });
       const missing = items.filter((it) => !x.builds[it.name]).map((it) => it.name);
       if (missing.length) throw new Error('add these builds to CARD_PAGES.small: ' + missing.join(', '));

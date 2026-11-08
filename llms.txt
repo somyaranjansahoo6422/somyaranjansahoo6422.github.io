@@ -23,10 +23,10 @@ The whole portfolio is one page, https://somyaranjansahoo6422.github.io/, and th
 - [UNSPOKEN](https://somyaranjansahoo6422.github.io/projects/unspoken/): A chest-mounted wearable that helps visually impaired users sense obstacles and lets non-verbal users speak through gestures. Code: https://github.com/somyaranjansahoo6422/unspoken
 - [ANUMATI](https://somyaranjansahoo6422.github.io/projects/anumati/): A regulatory-clearance engine that models business licences as a dependency graph. Team project, Smart India Hackathon 2026 college round.
 - [Student Attendance Management System](https://somyaranjansahoo6422.github.io/projects/student-attendance-system/): A multi-role desktop app where students check in by scanning a QR code. Code: https://github.com/somyaranjansahoo6422/Student_Attendance_Management_System
-- [VECTOR](https://somyaranjansahoo6422.github.io/projects/vector/): An air-traffic-control simulator you play with spoken ATC commands, built by voice dictation.
+- [VECTOR](https://somyaranjansahoo6422.github.io/projects/vector/): A 3D flight game built by voice dictation with Wispr Flow, which began as an air-traffic-control simulator played with spoken ATC commands. Code: https://github.com/somyaranjansahoo6422/Game-using-Wispr-Flow/tree/vector-atc
 - [Face-scan Verification & Fraud Console](https://somyaranjansahoo6422.github.io/projects/face-scan-fraud-console/): Two team builds from Hacker House Goa 2026: face-scan verification anchored on Solana, and a card-fraud console over TigerGraph. Code: https://github.com/Swagat-CREATOR/hhgoa-task-3-by-ASTRA-X-
-- [MindEase](https://somyaranjansahoo6422.github.io/projects/mindease/): A 10-question stress self-check for college students, shortlisted at Smart India Hackathon 2025.
-- [Smaller builds](https://somyaranjansahoo6422.github.io/projects/smaller-builds/): Python games and utilities, including Snake, Pong, Connect Four and Tic Tac Toe against AI opponents (Tic Tac Toe uses Minimax), a scientific calculator, an inventory manager and an expense tracker, with demo videos.
+- [MindEase](https://somyaranjansahoo6422.github.io/projects/mindease/): A 10-question stress self-check and a calming memory game for college students, shortlisted at Smart India Hackathon 2025. Code: https://github.com/somyaranjansahoo6422/mindease
+- [Smaller builds](https://somyaranjansahoo6422.github.io/projects/smaller-builds/): Python games and utilities, including Snake, Pong, Connect Four and Tic Tac Toe against AI opponents (Tic Tac Toe uses Minimax), a scientific calculator, an inventory manager, an expense tracker and my Class 12 toll plaza project, with demo videos.
 
 ## Profiles
 
