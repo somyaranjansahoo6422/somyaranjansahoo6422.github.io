@@ -1397,6 +1397,8 @@
     var ghCards = [];
     Array.prototype.forEach.call(document.querySelectorAll('#work [data-cats]'), function (it) {
       if (it.querySelector('.mini')) return;
+      // Small cards keep their height: only case studies, and cards marked data-gh, get the live GitHub line.
+      if (!it.classList.contains('case') && !it.hasAttribute('data-gh')) return;
       var m = Array.prototype.slice.call(it.querySelectorAll('a[href*="github.com/"]')).map(function (a) { return a.href.match(/github\.com\/([^/?#]+)\/([^/?#]+)/); }).filter(Boolean)[0];
       if (!m) return;
       var repo = m[1] + '/' + m[2];
@@ -1404,7 +1406,7 @@
       p.className = 'gh'; p.href = 'https://github.com/' + repo; p.target = '_blank'; p.rel = 'noopener noreferrer';
       p.innerHTML = GHICON + '<span class="gh__repo"></span>';
       p.querySelector('.gh__repo').textContent = repo;
-      var where = it.querySelector('.case__links') || it.querySelector(':scope > .link:last-of-type');
+      var where = it.querySelector('.case__links') || it.querySelector('.card__links') || it.querySelector(':scope > .link:last-of-type');
       if (where) where.insertAdjacentElement('beforebegin', p); else it.appendChild(p);
       it._gh = { repo: repo, el: p };
       ghCards.push(it);
