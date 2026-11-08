@@ -35,6 +35,8 @@ node build.js
 
 To add a project, add it to the list at the top of `tools/make-projects.js`, then to `sitemap.xml` and `llms.txt`.
 
+The smaller homepage cards (VECTOR, Face-scan & Fraud Console, MindEase, Smaller builds) carry only a short summary, so the extra detail for their pages lives in `CARD_PAGES` in the same file. Keep every line there checked against the project's README or code.
+
 ## Hosting (GitHub Pages)
 
 The site deploys from the `main` branch, root folder. Every push to `main` updates it, and the repository must stay public on a free GitHub plan.
