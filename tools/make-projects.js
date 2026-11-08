@@ -79,7 +79,9 @@ const CARD_PAGES = {
     lede: 'Games, desktop tools and command-line programs I wrote in Python, with demos for the ones I have recorded.',
     builds: {
       'Expense Tracker': { img: 'assets/img/proj-small-1600.webp', p: 'A command-line expense tracker that saves to a JSON file: add an expense, list them all, delete one and total your spending.' },
-      'Smart Inventory Manager': { p: 'A desktop inventory manager in CustomTkinter, written as one of my internship tasks: a live dashboard with stock value in rupees, search with a price range, sortable tables, low-stock alerts at a threshold you set, a category report with a bar chart, and CSV import and export.' },
+      'Smart Inventory Manager': {
+        pic: { big: 'assets/img/proj-inventory-1400.webp', src: 'assets/img/proj-inventory-960.webp', srcset: 'assets/img/proj-inventory-480.webp 480w, assets/img/proj-inventory-960.webp 960w, assets/img/proj-inventory-1400.webp 1400w', w: 1400, h: 844, alt: 'Smart Inventory Management System dashboard with summary cards and action buttons, shown with sample products' },
+        p: 'A desktop inventory manager in CustomTkinter, written as one of my internship tasks: a live dashboard with stock value in rupees, search with a price range, sortable tables, low-stock alerts at a threshold you set, a category report with a bar chart, and CSV import and export.' },
       'Pong: AI Edition': { p: 'Pong in Pygame at 60 FPS: play an AI paddle or a friend on one keyboard, set your own winning score, and aim your shots, because where the ball hits the paddle sets its angle.' },
       'Connect 4 vs AI': {
         p: 'Connect Four in Tkinter against a friend or an AI with Easy, Medium and Hard levels, with animated drops, a preview of where your piece will land, undo, save and load, and lifetime win statistics.',
