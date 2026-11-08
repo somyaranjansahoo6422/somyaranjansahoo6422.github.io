@@ -49,8 +49,8 @@ Measured with Google PageSpeed Insights on 8 November 2026. Google tests mobile 
 
 | | Performance | Accessibility | Best Practices | SEO |
 |---|---|---|---|---|
-| **Mobile** | 98 | 100 | 100 | 100 |
-| **Desktop** | 99 | 100 | 100 | 100 |
+| **Mobile** | 98–100 | 100 | 100 | 100 |
+| **Desktop** | 99–100 | 100 | 100 | 100 |
 
 - **Speed on a phone:** the first screen appears in about 1.1 seconds and the main image in about 1.5 seconds on Google's slow-4G test, with nothing shifting as it loads. Repeat visits load from the device and appear about twice as fast.
 - **Weight:** about 200 KB for the first screen, with fonts trimmed to the characters the site uses.
