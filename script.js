@@ -1551,8 +1551,11 @@
     tIn.focus();
   }
   var tag = document.querySelector('.stage__tag');
-  if (tag) {
-    var tb = document.createElement('button');
+  // The page ships the button already built, so the first paint has its final size and nothing jumps.
+  var tb = tag && tag.querySelector('.tag__btn');
+  if (tb) tb.addEventListener('click', function () { openTerminal(tb); });
+  else if (tag) {
+    tb = document.createElement('button');
     tb.type = 'button'; tb.className = 'tag__btn';
     var extra = tag.querySelector('.tag__extra');
     tb.innerHTML = '<span class="tag__top"><span class="tag__cmd mono">$ whoami</span><span class="tag__run">run ↵</span></span>' +
