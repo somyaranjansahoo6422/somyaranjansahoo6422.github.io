@@ -26,7 +26,7 @@ The whole portfolio is one page, https://somyaranjansahoo6422.github.io/, and th
 - [VECTOR](https://somyaranjansahoo6422.github.io/projects/vector/): An air-traffic-control simulator you play with spoken ATC commands, built by voice dictation.
 - [Face-scan Verification & Fraud Console](https://somyaranjansahoo6422.github.io/projects/face-scan-fraud-console/): Two team builds from Hacker House Goa 2026: face-scan verification anchored on Solana, and a card-fraud console over TigerGraph. Code: https://github.com/Swagat-CREATOR/hhgoa-task-3-by-ASTRA-X-
 - [MindEase](https://somyaranjansahoo6422.github.io/projects/mindease/): A 10-question stress self-check for college students, shortlisted at Smart India Hackathon 2025.
-- [Smaller builds](https://somyaranjansahoo6422.github.io/projects/smaller-builds/): Python games and utilities, including Snake, Pong, Connect 4 vs AI, a calculator and an expense tracker, with demo videos.
+- [Smaller builds](https://somyaranjansahoo6422.github.io/projects/smaller-builds/): Python games and utilities, including Snake, Pong, Connect Four and Tic Tac Toe against AI opponents (Tic Tac Toe uses Minimax), a scientific calculator, an inventory manager and an expense tracker, with demo videos.
 
 ## Profiles
 
