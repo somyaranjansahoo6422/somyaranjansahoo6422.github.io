@@ -29,7 +29,8 @@ const CARD_PAGES = {
     sections: [
       { h: 'How you play', p: 'Separation missions, gates and pilot read-backs, all driven by your voice.' },
       { h: 'Built with', p: 'Python and FastAPI on the server, a Three.js 3D airspace in the browser, and the Web Speech API to hear your commands.' },
-      { h: 'How I built it', p: 'By voice dictation, speaking instead of typing, the same way I built <a href="/projects/vantage-zero/">VANTAGE: ZERO</a>.' },
+      { h: 'How I built it', p: 'By voice dictation with Wispr Flow, speaking instead of typing, the same way I built <a href="/projects/vantage-zero/">VANTAGE: ZERO</a>.' },
+      { h: 'Where it went next', p: 'On the same FastAPI and Three.js base, VECTOR has grown into a 3D air-combat prototype: pick an F-35 or a Su-57 and one of three fictional theatres, then intercept hostile aircraft and complete objectives while the server runs the battle every 80 ms.' },
     ],
   },
   facescan: {
@@ -52,10 +53,21 @@ const CARD_PAGES = {
   mindease: {
     kicker: 'Hackathon project · Smart India Hackathon 2025',
     sections: [
-      { h: 'What we built', p: 'A web prototype with a 10-question stress self-check that scores your answers, made with HTML, CSS and JavaScript.' },
+      { h: 'Stress Analyser', ul: [
+        '10 questions on stress, sleep, exercise, diet, breaks, social support, relaxation, workload, enjoyment and motivation.',
+        'Each answer counts +1, 0 or −1, which gives a net score from −10 to +10 and a wellbeing percentage.',
+        'Four result bands, from “very good: low stress” to “high stress: take action”, each with its own suggestions.',
+        'It is a self-reflection tool, not a medical one.',
+      ] },
+      { h: 'Zen Memory Match', p: 'A short, calming break: 16 cards with 8 pairs of nature emoji, shuffled every game, with a live count of the pairs you have found.' },
+      { h: 'Built with', p: 'Plain HTML, CSS and JavaScript, with no frameworks and nothing to install. Nothing you answer leaves your device.' },
       { h: 'Result', p: 'Shortlisted at Smart India Hackathon 2025. It was my first hackathon.' },
     ],
+    demo: { src: 'assets/video/mindease-stress-quiz.mp4', poster: 'assets/img/proj-mindease-quiz-960.webp', title: 'Watch the Stress Analyser', caption: 'Answering the 10 questions and getting a wellbeing score with suggestions' },
+    galleryTitle: 'Screenshots and photos',
     gallery: [
+      { big: 'assets/img/proj-mindease-quiz-1280.webp', src: 'assets/img/proj-mindease-quiz-960.webp', srcset: 'assets/img/proj-mindease-quiz-480.webp 480w, assets/img/proj-mindease-quiz-960.webp 960w, assets/img/proj-mindease-quiz-1280.webp 1280w', w: 1280, h: 720, alt: 'The MindEase 10-question quiz, starting with how often you feel stressed and how well you sleep', caption: 'The Stress Analyser’s 10 questions' },
+      { big: 'assets/img/proj-mindease-result-1280.webp', src: 'assets/img/proj-mindease-result-960.webp', srcset: 'assets/img/proj-mindease-result-480.webp 480w, assets/img/proj-mindease-result-960.webp 960w, assets/img/proj-mindease-result-1280.webp 1280w', w: 1280, h: 720, alt: 'A MindEase result reading good, generally balanced, with a 70 percent wellbeing score and three suggestions', caption: 'A result: score, wellbeing percentage and suggestions' },
       { big: 'assets/img/ach-sih2025-1600.webp', src: 'assets/img/ach-sih2025-960.webp', srcset: 'assets/img/ach-sih2025-480.webp 480w, assets/img/ach-sih2025-960.webp 960w, assets/img/ach-sih2025-1600.webp 1600w', w: 1600, h: 902, alt: 'Smart India Hackathon 2025 team photo', caption: 'The team at Smart India Hackathon 2025' },
       { big: 'assets/img/moment-8-1280.webp', src: 'assets/img/moment-8-1280.webp', srcset: 'assets/img/moment-8-480.webp 480w, assets/img/moment-8-1280.webp 1280w', w: 1280, h: 960, alt: 'My first hackathon: the SIH 2025 college round', caption: 'My first hackathon: the SIH 2025 college round' },
     ],
@@ -65,9 +77,22 @@ const CARD_PAGES = {
     lede: 'Games, desktop tools and command-line programs I wrote in Python, with demos for the ones I have recorded.',
     builds: {
       'Expense Tracker': { img: 'assets/img/proj-small-1600.webp', p: 'A command-line expense tracker that saves to a JSON file: add an expense, list them all, delete one and total your spending.' },
-      'Smart Inventory Manager': { p: 'A desktop inventory manager with a CustomTkinter interface, written as one of my internship tasks.' },
-      'Pong: AI Edition': { p: 'Classic Pong with keyboard paddles, ball physics, collision detection and scoring, plus an AI Edition where the computer plays one paddle.' },
-      'Connect 4 vs AI': { p: 'Connect 4 on a Tkinter board with two modes, a friend on the same machine or an AI opponent, built only with Python’s standard library.' },
+      'Smart Inventory Manager': { p: 'A desktop inventory manager in CustomTkinter, written as one of my internship tasks: a live dashboard with stock value in rupees, search with a price range, sortable tables, low-stock alerts at a threshold you set, a category report with a bar chart, and CSV import and export.' },
+      'Pong: AI Edition': { p: 'Pong in Pygame at 60 FPS: play an AI paddle or a friend on one keyboard, set your own winning score, and aim your shots, because where the ball hits the paddle sets its angle.' },
+      'Connect 4 vs AI': {
+        p: 'Connect Four in Tkinter against a friend or an AI with Easy, Medium and Hard levels, with animated drops, a preview of where your piece will land, undo, save and load, and lifetime win statistics.',
+        pic: { big: 'assets/img/proj-connect4-680.webp', src: 'assets/img/proj-connect4-680.webp', srcset: 'assets/img/proj-connect4-480.webp 480w, assets/img/proj-connect4-680.webp 680w', w: 680, h: 720, alt: 'Connect Four Pro mid-game against the hard AI, with red and yellow pieces on a blue board' },
+      },
+      'Tic Tac Toe': {
+        after: 'Connect 4 vs AI', tech: 'Tkinter',
+        p: 'A dark-themed Tic Tac Toe whose AI uses the Minimax algorithm, so it never loses, plus a 2-player mode and a live scoreboard.',
+        pic: { big: 'assets/img/proj-tictactoe-700.webp', src: 'assets/img/proj-tictactoe-700.webp', srcset: 'assets/img/proj-tictactoe-480.webp 480w, assets/img/proj-tictactoe-700.webp 700w', w: 700, h: 850, alt: 'Tic Tac Toe board ending in a draw against the Minimax AI' },
+        video: { href: 'assets/video/tictactoe.mp4', caption: 'Tic Tac Toe: a draw against the Minimax AI, then a 2-player game' },
+      },
+      'Scientific Calculator': {
+        after: 'Simple Calculator', tech: 'CustomTkinter',
+        p: 'A dark-mode scientific calculator with trigonometry and its inverses, logarithms, powers, roots, factorials, π and e, degree and radian modes, and keyboard input. It reads each expression with Python’s ast module instead of eval, so only whitelisted maths can run.',
+      },
       Snake: { img: 'assets/img/proj-snake-600.webp', p: 'The snake grows every time it eats, and hitting a wall or its own body ends the run. The score resets, but the high score stays.' },
       'Simple Calculator': { img: 'assets/img/proj-calc-1600.webp', p: 'Add, subtract, multiply and divide in a loop, with clear handling of division by zero and of letters typed instead of numbers. It also ships as a Windows .exe.' },
       'Toll Plaza Manager': { img: 'assets/img/proj-tollcli-1600.webp', p: 'A console app to add, update and remove toll plazas, with a duplicate-name check and a table of rates with a rupee total.' },
@@ -240,19 +265,27 @@ function page(p, d, all, shell) {
       <div class="proj__grid${x.sections.length === 4 ? ' proj__grid--pair' : ''}">
         ${x.sections.map(block).join('\n        ')}
       </div>`;
+    if (x.demo) body += `
+      <h2 class="proj__h2">${esc(x.demo.title)}</h2>
+      <figure class="proj__media proj__video"><video controls preload="none" playsinline poster="${abs(x.demo.poster)}" src="${esc(abs(x.demo.src))}"></video><figcaption>${esc(x.demo.caption)}</figcaption></figure>`;
     if (x.gallery) body += `
-      <h2 class="proj__h2">Photos</h2>
+      <h2 class="proj__h2">${esc(x.galleryTitle || 'Photos')}</h2>
       <div class="proj__gallery">
         ${x.gallery.map((g) => `<figure><a href="${abs(g.big)}">${img(g, ' loading="lazy" decoding="async"', '(max-width: 760px) calc(100vw - 32px), 380px')}</a><figcaption>${esc(g.caption)}</figcaption></figure>`).join('\n        ')}
       </div>`;
     if (x.builds) {
-      const missing = d.items.filter((it) => !x.builds[it.name]).map((it) => it.name);
+      const items = [];
+      d.items.forEach((it) => {
+        items.push(it);
+        Object.keys(x.builds).filter((k) => x.builds[k].after === it.name).forEach((k) => items.push({ name: k, href: '', tech: x.builds[k].tech, video: x.builds[k].video }));
+      });
+      const missing = items.filter((it) => !x.builds[it.name]).map((it) => it.name);
       if (missing.length) throw new Error('add these builds to CARD_PAGES.small: ' + missing.join(', '));
       body += `
       <div class="proj__builds">
-        ${d.items.map((it, n) => {
+        ${items.map((it, n) => {
           const b = x.builds[it.name];
-          const shot = b.img && d.pics.find((q) => q.big === b.img);
+          const shot = b.pic || (b.img && d.pics.find((q) => q.big === b.img));
           if (b.img && !shot) throw new Error('no homepage picture for ' + it.name);
           const lazy = n ? ' loading="lazy" decoding="async"' : ' fetchpriority="high"';
           const media = it.video
